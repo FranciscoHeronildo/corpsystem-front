@@ -1,7 +1,43 @@
-# Vue 3 + Vite
+# Corpsystem
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<div align="center">
+  <img src="https://fakestoreapi.com/icons/logo.png" alt="logo">
+</div>
 
-## Recommended IDE Setup
+## Sobre
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Fake Story trata-se de um projeto teste de um e-commerce fake.
+
+## Ambiente de Desenvolvimento
+
+Clone o repositório:
+
+```bash
+$ cd ~/your/directory/
+$ git clone https://github.com/FranciscoHeronildo/corpsystem-front.git
+$ cd corpsystem-front
+```
+
+Instale as dependencias:
+
+```bash
+$ yarn install
+```
+
+Inicie a aplicação:
+
+```bash
+$ yarn dev
+```
+
+Acesse a aplicaçã na porta _5173_:
+
+```
+http://localhost:5173/
+```
+
+<br>
+
+### Deployment
+
+[Link](_)
