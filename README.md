@@ -1,4 +1,4 @@
-# Corpsystem
+# Corpsystem - Fake Story
 
 <div align="center">
   <img src="https://fakestoreapi.com/icons/logo.png" alt="logo">
@@ -6,7 +6,7 @@
 
 ## Sobre
 
-Fake Story trata-se de um projeto teste de um e-commerce fake.
+Fake Story trata-se de um projeto teste de um e-commerce.
 
 ## Ambiente de Desenvolvimento
 
@@ -30,7 +30,7 @@ Inicie a aplicação:
 $ yarn dev
 ```
 
-Acesse a aplicaçã na porta _5173_:
+Acesse a aplicação no navegador pela porta _5173_:
 
 ```
 http://localhost:5173/
@@ -38,6 +38,12 @@ http://localhost:5173/
 
 <br>
 
-### Deployment
+## Ambiente de Homologação
 
-[Link](_)
+Link para acessar o [Netlify](https://netlify.app/)
+
+## Contribuição
+
+<a href="">
+  <img src="https://contrib.rocks/image?repo=FranciscoHeronildo/corpsystem-front" />
+</a>
