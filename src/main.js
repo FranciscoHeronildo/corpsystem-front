@@ -1,11 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
+import App from './App.vue';
 const app = createApp(App);
 
-app.use(PrimeVue, {});
-app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(PrimeVue,);
 
-createApp(App).mount('#app')
+app.mount('#app');
