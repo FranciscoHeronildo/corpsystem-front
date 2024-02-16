@@ -1,11 +1,13 @@
 <script setup>
-import Store from "./components/Store.vue";
 import Navbar from "./components/Navbar.vue";
+import Carousel from "./components/Carousel.vue";
+// import Store from "./components/Store.vue";
 </script>
 
 <template>
   <Navbar />
-  <Store />
+  <Carousel />
+  <!-- <Store /> -->
 </template>
 
 <style scoped></style>
