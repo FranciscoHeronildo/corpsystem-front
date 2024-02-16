@@ -1,8 +1,11 @@
-import { createApp } from 'vue';
-import PrimeVue from 'primevue/config';
-import App from './App.vue';
-const app = createApp(App);
+import { createApp } from "vue";
+import App from "./App.vue";
+import { router } from "./router";
+import naive from 'naive-ui'
 
-app.use(PrimeVue,);
+
+const app = createApp(App);
+app.use(router);
+app.use(naive)
 
 app.mount('#app');

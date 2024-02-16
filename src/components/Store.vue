@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1>Fake Story CorpSystem</h1>
+    <n-space>
+      <n-spin size="large" />
+    </n-space>
   </div>
 </template>
 
@@ -12,12 +14,13 @@
   height: 100vh;
   width: 100vw;
   background-color: #f5f5f5;
+  font-weight: bold;
+  font-size: x-large;
   font-family: "Roboto", sans-serif;
 }
 </style>
 
-<script>
-import api from "../server/api";
+<!-- <script>
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
@@ -30,4 +33,4 @@ export default defineComponent({
     fetchProducts();
   },
 });
-</script>
+</script> -->
