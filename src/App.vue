@@ -4,7 +4,7 @@
       <img
         src="../src/assets/img/logo.png"
         alt="Logo"
-        style="width: 45px; margin: 15px"
+        style="width: 48px; margin: 10px"
       />
       <v-toolbar-title>Corpsystem - Fake Store</v-toolbar-title>
       <v-btn
@@ -28,12 +28,4 @@ const router = useRouter();
 const store = productsStore();
 </script>
 
-<style scoped>
-.cart-items {
-  text-align: end;
-  padding: 16px;
-  font-weight: bold;
-  font-size: 24px;
-  cursor: pointer;
-}
-</style>
+<style scoped></style>
