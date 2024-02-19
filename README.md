@@ -1,4 +1,4 @@
-# Corpsystem - Fake Story
+# Corpsystem - Fake Store
 
 <div align="center">
   <img src="https://fakestoreapi.com/icons/logo.png" alt="logo">
@@ -6,7 +6,7 @@
 
 ## Sobre
 
-Fake Story trata-se de um projeto teste de um e-commerce.
+Fake Store trata-se de um projeto teste de um e-commerce.
 
 ## Ambiente de Desenvolvimento
 

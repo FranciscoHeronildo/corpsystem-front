@@ -1,9 +1,15 @@
 <template>
   <header>
-    <v-toolbar title="Application">
+    <v-toolbar>
+      <img
+        src="../src/assets/img/logo.png"
+        alt="Logo"
+        style="width: 45px; margin: 15px"
+      />
+      <v-toolbar-title>Corpsystem - Fake Store</v-toolbar-title>
       <v-btn
         @click="router.push({ name: 'CartView' })"
-        color="primary"
+        color="#802c6e"
         variant="elevated"
         >Items in Cart: {{ store.cart.length }}
       </v-btn>
