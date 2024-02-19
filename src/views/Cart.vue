@@ -6,8 +6,8 @@
   <div class="cart-items" v-else>
     <div class="cart-item" v-for="item in store.cart" :key="item.id">
       <div class="item-details">
-        <img :src="item.thumbnail" alt="" />
-        <span>Brand: {{ item.brand }}</span>
+        <img :src="item.image" alt="" />
+        <span>{{ item.title }}</span>
         <span>Category: {{ item.category }}</span>
         <span>Price: ${{ item.price }}</span>
         <button @click="removeFromCart(item.id)">Remove</button>

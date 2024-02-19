@@ -4,7 +4,7 @@
     color="#802c6e"
     variant="elevated"
   >
-    Back to catalog
+    Back to Catalog
   </v-btn>
 
   <div class="product">
@@ -12,11 +12,11 @@
       <img :src="selectedProduct.image" />
     </div>
     <div class="product-details">
-      <p style="font-size: 20px">Brand: {{ selectedProduct.title }}</p>
+      <p style="font-size: 20px">{{ selectedProduct.title }}</p>
       <p>Description: {{ selectedProduct.description }}</p>
       <h2>Price: ${{ selectedProduct.price }}</h2>
       <v-btn variant="elevated" color="indigo-lighten-3" @click="addToCart"
-        >Add to cart</v-btn
+        >Add to Cart</v-btn
       >
     </div>
   </div>
@@ -55,6 +55,6 @@ const addToCart = () => {
 }
 
 .product-image {
-  margin: 21px;
+  margin: 24px;
 }
 </style>

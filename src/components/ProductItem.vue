@@ -1,10 +1,10 @@
 <template>
   <v-sheet class="ma-2 pa-2">
     <v-card class="product">
-      <v-img :src="props.productData.thumbnail" height="200px" cover />
+      <v-img :src="props.productData.image" height="200px" cover />
 
       <v-card-title>
-        {{ props.productData.brand }}
+        {{ props.productData.title }}
       </v-card-title>
 
       <v-card-subtitle> $ {{ props.productData.price }} </v-card-subtitle>
