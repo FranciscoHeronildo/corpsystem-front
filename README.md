@@ -40,7 +40,7 @@ http://localhost:5173/
 
 ## Ambiente de Homologação
 
-Link para acessar o [Netlify](https://netlify.app/)
+Link para acessar o [Netlify](https://corpsystem.netlify.app/)
 
 ## Contribuição
 

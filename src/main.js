@@ -1,11 +1,24 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import { router } from "./router";
-import naive from 'naive-ui'
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import './assets/styles.css'
 
+import App from './App.vue'
+import router from './router'
 
-const app = createApp(App);
-app.use(router);
-app.use(naive)
+const app = createApp(App)
 
-app.mount('#app');
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+    components,
+    directives,
+})
+
+app.use(createPinia())
+app.use(router)
+app.use(vuetify)
+
+app.mount('#app')
