@@ -9,8 +9,13 @@
 
       <v-card-subtitle> $ {{ props.productData.price }} </v-card-subtitle>
 
-      <v-card-text>
-        {{ props.productData.description }}
+      <v-card-text class="description">
+        <span
+          v-tooltip.bottom="props.productData.description"
+          class="tooltip-target"
+        >
+          {{ truncateDescription(props.productData.description) }}
+        </span>
       </v-card-text>
 
       <v-card-actions>
@@ -24,8 +29,22 @@
 
 <script>
 import { defineComponent } from "vue";
+import VTooltip from "v-tooltip";
+
 export default defineComponent({
   name: "ProductItem",
+  directives: {
+    Tooltip: VTooltip,
+  },
+  methods: {
+    truncateDescription(description) {
+      const maxLength = 100;
+      if (description.length > maxLength) {
+        return description.slice(0, maxLength) + "...";
+      }
+      return description;
+    },
+  },
 });
 </script>
 
@@ -44,3 +63,16 @@ const goToProductPage = (productId) => {
   emit("item-clicked", productId);
 };
 </script>
+
+<style scoped>
+.description {
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tooltip-target {
+  cursor: help;
+}
+</style>
