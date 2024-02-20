@@ -25,15 +25,17 @@
         </v-btn>
       </div>
     </div>
+
+    <v-btn
+      v-if="store.cart.length > 0"
+      @click="buy"
+      variant="elevated"
+      color="#802C6E"
+    >
+      Purchase
+    </v-btn>
   </div>
 </template>
-
-<script>
-import { defineComponent } from "vue";
-export default defineComponent({
-  name: "CartView",
-});
-</script>
 
 <script setup>
 import { productsStore } from "@/stores/products";
@@ -46,6 +48,8 @@ const store = productsStore();
 const removeFromCart = (id) => {
   store.removeFromCart(id);
 };
+
+const buy = () => {};
 </script>
 
 <style scoped>
@@ -53,13 +57,14 @@ const removeFromCart = (id) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  margin-top: 20px;
   box-shadow: 0 0 17px 6px #e7e7e7;
   border-radius: 8px;
   padding: 16px;
 }
 
 .item-details img {
-  width: 20%;
+  width: 8%;
 }
 </style>

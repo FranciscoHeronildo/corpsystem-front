@@ -9,7 +9,7 @@
       <v-toolbar-title>Corpsystem - Fake Store</v-toolbar-title>
       <v-btn
         @click="router.push({ name: 'CartView' })"
-        color="#802c6e"
+        color="#802C6E"
         variant="elevated"
         >Items in Cart: {{ store.cart.length }}
       </v-btn>
