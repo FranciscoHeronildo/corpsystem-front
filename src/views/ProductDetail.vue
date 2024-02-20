@@ -1,7 +1,7 @@
 <template>
   <v-btn
     @click="router.push({ name: 'Catalog' })"
-    color="#802c6e"
+    color="#802C6E"
     variant="elevated"
   >
     Back to Catalog
@@ -12,9 +12,11 @@
       <img :src="selectedProduct.image" />
     </div>
     <div class="product-details">
-      <h4>{{ selectedProduct.title }}</h4>
-      <p>Description: {{ selectedProduct.description }}</p>
-      <h3>Price: ${{ selectedProduct.price }}</h3>
+      <h3>{{ selectedProduct.title }}</h3>
+      <p><b>Description:</b> {{ selectedProduct.description }}</p>
+      <h2>
+        Price: <i>${{ selectedProduct.price }}</i>
+      </h2>
       <v-btn variant="elevated" color="#D48FC5" @click="addToCart"
         >Add to Cart</v-btn
       >
@@ -50,17 +52,14 @@ const addToCart = () => {
 
 <style scoped>
 .product {
+  height: 80vh;
+  width: 80vw;
   display: flex;
-  width: 100%;
   margin-top: 50px;
+  margin-left: 14vw;
 }
 
 .product-image {
-  margin: 20px;
-  width: 10%;
-}
-
-.product-details {
-  flex: 1;
+  margin-right: 24px;
 }
 </style>

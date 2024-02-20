@@ -1,5 +1,11 @@
 <template>
-  <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
+  <v-btn
+    @click="router.push({ name: 'Catalog' })"
+    variant="elevated"
+    color="#D48FC5"
+  >
+    Back to Catalog
+  </v-btn>
   <div v-if="!store.cart.length" style="text-align: center">
     <h1>Empty Cart ...</h1>
   </div>
@@ -10,7 +16,13 @@
         <span>{{ item.title }}</span>
         <span>Category: {{ item.category }}</span>
         <span>Price: ${{ item.price }}</span>
-        <button @click="removeFromCart(item.id)">Remove</button>
+        <v-btn
+          @click="removeFromCart(item.id)"
+          variant="outlined"
+          color="#D48FC5"
+        >
+          Remove
+        </v-btn>
       </div>
     </div>
   </div>
