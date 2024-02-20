@@ -12,10 +12,10 @@
       <img :src="selectedProduct.image" />
     </div>
     <div class="product-details">
-      <p style="font-size: 20px">{{ selectedProduct.title }}</p>
+      <h4>{{ selectedProduct.title }}</h4>
       <p>Description: {{ selectedProduct.description }}</p>
-      <h2>Price: ${{ selectedProduct.price }}</h2>
-      <v-btn variant="elevated" color="indigo-lighten-3" @click="addToCart"
+      <h3>Price: ${{ selectedProduct.price }}</h3>
+      <v-btn variant="elevated" color="#D48FC5" @click="addToCart"
         >Add to Cart</v-btn
       >
     </div>
@@ -51,10 +51,16 @@ const addToCart = () => {
 <style scoped>
 .product {
   display: flex;
+  width: 100%;
   margin-top: 50px;
 }
 
 .product-image {
-  margin: 24px;
+  margin: 20px;
+  width: 10%;
+}
+
+.product-details {
+  flex: 1;
 }
 </style>
