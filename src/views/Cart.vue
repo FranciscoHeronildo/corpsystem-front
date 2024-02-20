@@ -15,7 +15,9 @@
         <img :src="item.image" alt="" />
         <span>{{ item.title }}</span>
         <span>Category: {{ item.category }}</span>
-        <span>Price: ${{ item.price }}</span>
+        <span
+          >Price: <b>${{ item.price }}</b></span
+        >
         <v-btn
           @click="removeFromCart(item.id)"
           variant="outlined"
@@ -28,7 +30,7 @@
 
     <v-btn
       v-if="store.cart.length > 0"
-      @click="buy"
+      @click="buy(item.price)"
       variant="elevated"
       color="#802C6E"
     >
@@ -41,16 +43,15 @@
 import { productsStore } from "@/api/stores/products";
 import { useRouter } from "vue-router";
 
-const router = useRouter();
-
 const store = productsStore();
+const router = useRouter();
 
 const removeFromCart = (id) => {
   store.removeFromCart(id);
 };
 
-const buy = () => {
-  router.push({ name: "Dashboard" });
+const buy = (id) => {
+  router.push({ name: "Dashboard", params: { id } });
 };
 </script>
 
