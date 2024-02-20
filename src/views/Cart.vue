@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { productsStore } from "@/stores/products";
+import { productsStore } from "@/api/stores/products";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -49,7 +49,9 @@ const removeFromCart = (id) => {
   store.removeFromCart(id);
 };
 
-const buy = () => {};
+const buy = () => {
+  router.push({ name: "Dashboard" });
+};
 </script>
 
 <style scoped>

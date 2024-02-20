@@ -22,7 +22,7 @@
 
 <script setup>
 import { useRouter } from "vue-router";
-import { productsStore } from "@/stores/products";
+import { productsStore } from "@/api/stores/products";
 
 const router = useRouter();
 const store = productsStore();
