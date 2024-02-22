@@ -6,20 +6,22 @@
         {{ item.title }} - ${{ item.price }}
       </li>
     </ul>
-    <v-btn @click="generatePDF" variant="elevated" color="#802C6E"
-      >Download PDF</v-btn
-    >
+    <v-btn @click="generatePDF" variant="elevated" color="#802C6E">
+      Download PDF
+    </v-btn>
   </div>
 </template>
 
 <script setup>
 import { productsStore } from "@/api/stores/products";
+import { ref } from "vue";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 
 const store = productsStore();
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.vfs =
+  pdfFonts && pdfFonts.pdfMake ? pdfFonts.pdfMake.vfs : globalThis.pdfMake.vfs;
 
 const generatePDF = () => {
   const productList = store.cart.map(
@@ -38,6 +40,12 @@ const generatePDF = () => {
   };
 
   pdfMake.createPdf(documentDefinition).open();
+};
+
+const cart = ref(store.cart);
+
+const updateCart = () => {
+  cart.value = store.cart;
 };
 </script>
 
