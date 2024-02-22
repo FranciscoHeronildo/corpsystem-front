@@ -16,12 +16,11 @@
 import { productsStore } from "@/api/stores/products";
 import { ref } from "vue";
 import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
 
 const store = productsStore();
 
-pdfMake.vfs =
-  pdfFonts && pdfFonts.pdfMake ? pdfFonts.pdfMake.vfs : globalThis.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const generatePDF = () => {
   const productList = store.cart.map(
