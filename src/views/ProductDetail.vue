@@ -9,7 +9,10 @@
 
   <div class="product">
     <div class="product-image">
-      <img :src="selectedProduct.image" />
+      <img
+        :src="selectedProduct.image"
+        style="max-width: 100%; max-height: 100%; padding: 10px"
+      />
     </div>
     <div class="product-details">
       <h3>{{ selectedProduct.title }}</h3>
@@ -57,9 +60,5 @@ const addToCart = () => {
   display: flex;
   margin-top: 50px;
   margin-left: 14vw;
-}
-
-.product-image {
-  margin-right: 24px;
 }
 </style>
